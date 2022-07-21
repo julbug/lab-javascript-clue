@@ -146,21 +146,16 @@ function pickMystery(){
     };
   };
 
-    // let suspect = suspectsArray[Math.floor(Math.random()*suspectsArray.length)];
-    // let weapon = weaponsArray[Math.floor(Math.random()*weaponsArray.length)];
-    // let room = roomsArray[Math.floor(Math.random()*roomsArray.length)];    
-       
-//     return {
-//         suspect, weapon, room
-//     };
-// }
-
 // // ITERATION 3
 // //revealMystery Function
 
 function revealMystery (envelope) {
-    let {suspect, weapon, room} = envelope
-    return `${pickMystery.firstName} ${pickMystery.lastName} killed Mr. Boddy using the ${pickMystery.name} in the ${pickMystery.room}!`
-}
-console.log(`${pickMystery.firstName} ${pickMystery.lastName} killed Mr. Boddy using the ${pickMystery.name} in the ${pickMystery.room}!`);
+    let firstName = envelope.suspect.firstName;
+    let lastName = envelope.suspect.lastName;
+    let weapon = envelope.weapon.firstName;
+    let room = envelope.room.firstName;
+   
+    return `${revealMystery.firstName} ${revealMystery.lastName} killed Mr. Boddy using the ${revealMystery.name} in the ${revealMystery.room}!`
+  };
+  console.log(`${revealMystery.firstName} ${revealMystery.lastName} killed Mr. Boddy using the ${revealMystery.name} in the ${revealMystery.room}!`);
 
